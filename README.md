@@ -1,5 +1,5 @@
 # Predicting FLS2-flg22 Binding Behavior
-This repository contains scripts and workflows used to predict the binding bahevior of a given flg22 sequence to a given FLS2 sequence. AlphaFold3 (AF3) is used to predict the FLS2-flg22-BAK1 complex, and the AF3 scoring metrics (ipTM, PAE, etc.) are used to train simple machine learning models. 
+This repository contains scripts and workflows used to predict the binding bahevior of a given flg22 sequence to a given FLS2 sequence. AlphaFold3 (AF3) was used to predict the FLS2-flg22-BAK1 complex for each set of sequences, and the AF3 scoring metrics (ipTM, PAE, etc.) were used to train simple machine learning models. 
 
 This work was completed as part of a course project, and the aim of this repo is to provide the necessary information to recreate our work on MSU's HPCC. 
 
@@ -9,7 +9,7 @@ Two main datasets were used in this analysis.
 1. "Li Dataset" - T. Li et al., Unlocking expanded flagellin perception through rational receptor engineering, *Nature Plants* **11**, 1628-1641 (2025). https://doi.org/10.1038/s41477-025-02049-y
     * This dataset provides pairs of FLS2 and flagellin sequences (97 from *A. thaliana* and 122 from other plant species) which are labeled as "Perceived" or "Not Perceived." In the study, the authors demonstrated that AF3 ipTM score could be used to classify the perception. 
 2. "Colaianni Dataset" - N. Colaianni et al., A complex immune response to flagellin epitope variation in commensal communities, *Cell Host & Microbe* **29**, 635-649 (2021). https://doi.org/10.1016/j.chom.2021.02.006 
-    * This dataset provides 97 flagellin peptides which are labeled as "Canonical/Immunogenic," "Deviant," "Antagonistic," or "Evading."
+    * This dataset provides 97 flagellin peptides which are labeled as "Canonical/Immunogenic," "Deviant," "Antagonistic," or "Evading." All samples are from *A. thaliana*.
 
 ---
 ## Recreating the Results of Li et al.
