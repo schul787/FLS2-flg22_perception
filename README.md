@@ -29,7 +29,8 @@ Additionally, the BAK1/SERK3 coreceptor was also modeled in AF3 based on the res
 To predict the structure of each complex using AF3, an input .json file is needed. The scripts make_At_jsons.py and make_nonAt_jsons.py (in the input_prep folder) can be used to generate these inputs:
 
 ```python3 make_At_jsons.py
-python3 make_nonAt_jsons.py```
+python3 make_nonAt_jsons.py
+```
 
 This will specify that AF3 should be run three times with different seeds, as is done in Li et al. For detailed information on AF3, see the GitHub page: https://github.com/google-deepmind/alphafold3. 
 
@@ -39,7 +40,8 @@ The files described in this section can all be found in the slurm folder.
 To run AF3, a manifest must be created which lists the paths of each input file. First, the make_af3_manifest.py script should be run to generate the manifest, af3_input_manifest.txt. Then, the job script af3_array.sb can be run. This resource allocation and AlphaFold setup is specific to MSU's HPCC. Note that these scripts contain hard-coded file paths, which will need to be modified. 
 
 ```python3 make_af3_manifest.py
-sbatch af3_array.sb```
+sbatch af3_array.sb
+```
 
 If not all of the jobs successfully run, the make_missing_manifest.py script can be used to search through the output directory and make a new manifest of the jobs that were not completed. 
 
