@@ -28,7 +28,8 @@ Additionally, the BAK1/SERK3 coreceptor was also modeled in AF3 based on the res
 
 To predict the structure of each complex using AF3, an input .json file is needed. The scripts make_At_jsons.py and make_nonAt_jsons.py (in the input_prep folder) can be used to generate these inputs:
 
-```python3 make_At_jsons.py
+```
+python3 make_At_jsons.py
 python3 make_nonAt_jsons.py
 ```
 
@@ -39,7 +40,8 @@ The files described in this section can all be found in the slurm folder.
 
 To run AF3, a manifest must be created which lists the paths of each input file. First, the make_af3_manifest.py script should be run to generate the manifest, af3_input_manifest.txt. Then, the job script af3_array.sb can be run. This resource allocation and AlphaFold setup is specific to MSU's HPCC. Note that these scripts contain hard-coded file paths, which will need to be modified. 
 
-```python3 make_af3_manifest.py
+```
+python3 make_af3_manifest.py
 sbatch af3_array.sb
 ```
 
@@ -54,13 +56,14 @@ Run get_af_scores.py to interate through the AF3 output directories and save the
 
 Finally, to compare the classification results with Li et al., run make_roc.py and make_violin_plots.py to plot a Receiver Operating Characteristic Curve and calculate the Area Under the Curve, and to generate violin plots of the ipTM scores. 
 
-```python3 get_af_scores.py
+```
+python3 get_af_scores.py
 python3 add_known_to_score.py
 python3 make_roc.py
 python3 make_violin_plots.py
 ```
 ---
-## Predicting Antagonist vs. Agonist (Immunogenic) Flagellin Peptides
+## Predicting Antagonist vs. Agonist (Immunogenic) Flagellin Peptides Using Machine Learning
 The files described in this section can be found in the notebooks folder. 
 
 While predicting whether a flagellin peptide will be perceived by (i.e., elicit an immune response from) FLS2 is useful, there are other ways these peptides can modulate immune activity through interaction with FLS2. One important class of flagellin peptides are antagonists, which bind FLS2 but disrupt coreceptor binding, and can compete with agonist peptides (for simplicity, agonists will be referred to as immunogenic throughout this section).
