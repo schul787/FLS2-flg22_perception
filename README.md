@@ -25,6 +25,8 @@ Additionally, the BAK1/SERK3 coreceptor was also modeled in AF3 based on the res
 * NbSERK3A was paired with all others (*N. Benthamiana*)
 
 To predict the structure of each complex using AF3, an input .json file is needed. The scripts make_At_jsons.py and make_nonAt_jsons.py (in the input_prep folder) can be used to generate these inputs:
-`python3 make_At_jsons.py
+
+`python3 make_At_jsons.py  
 python3 make_nonAt_jsons.py`
+
 This will specify that AF3 should be run three times with different seeds, as is done in Li et al.
